@@ -12,10 +12,20 @@ Next.js + TypeScript + Supabase + Vercelで作った地域職人マッチング�
 4. Supabase SQL Editorで `supabase/schema.sql` を実行
 5. Supabase Storageで `request-photos` バケットを作成（公開）
 
+
+## 試作品として画面で試す方法
+SupabaseやVercelの設定がなくても、`npm run dev` で依頼フォーム送信と管理画面反映を試せます。
+送信内容はローカルの `.data/requests.json` に保存されます。
+
+1. `npm install`
+2. `npm run dev`
+3. `http://localhost:3000/request` から依頼を送信
+4. `http://localhost:3000/admin/requests` で送信内容を確認
+
 ## Supabaseの環境変数
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-- `SUPABASE_SERVICE_ROLE_KEY`（将来の管理処理向け）
+- `SUPABASE_SERVICE_ROLE_KEY`（Vercel本番環境で依頼保存・管理画面取得をサーバー側で行うために設定推奨）
 - `NEXT_PUBLIC_LINE_OFFICIAL_URL`
 
 ## 必要なテーブル
@@ -33,8 +43,10 @@ npm run dev
 ## Vercelデプロイ方法
 1. GitHubにpush
 2. VercelでプロジェクトImport
-3. 環境変数をVercelに設定
-4. Deploy
+3. 環境変数をVercelに設定（特に `NEXT_PUBLIC_SUPABASE_URL`、`NEXT_PUBLIC_SUPABASE_ANON_KEY`、`SUPABASE_SERVICE_ROLE_KEY`）
+4. Supabase Storage の `request-photos` バケットが公開で作成済みであることを確認
+5. Deploy
+6. `/request` から送信し、`/admin/requests` に即時反映されることを確認
 
 ## 今後追加すべき機能
 - 管理者ログイン（Supabase Auth）
