@@ -227,3 +227,321 @@ h1{font-size:30px} h2{font-size:22px}
     flex-direction: column;
   }
 }
+
+.local-job-home {
+  display: grid;
+  gap: 28px;
+}
+
+.local-hero {
+  align-items: center;
+  background:
+    linear-gradient(120deg, rgba(12, 42, 54, 0.92), rgba(19, 71, 70, 0.84)),
+    radial-gradient(circle at top right, rgba(255, 198, 93, 0.52), transparent 35%);
+  border-radius: 28px;
+  color: #ffffff;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  overflow: hidden;
+  padding: 44px;
+  position: relative;
+}
+
+.local-hero::before {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  content: "";
+  height: 260px;
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  width: 260px;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.service-badge {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  color: #ffe6a3;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0 0 14px;
+  padding: 8px 14px;
+}
+
+.local-hero h1 {
+  font-size: clamp(34px, 5.6vw, 58px);
+  line-height: 1.12;
+  margin: 0;
+  max-width: 780px;
+}
+
+.local-hero .hero-lead {
+  color: #e6f3f2;
+  font-size: 18px;
+  line-height: 1.9;
+  margin: 20px 0 28px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.primary-action,
+.secondary-action,
+.card-link {
+  border-radius: 999px;
+  display: inline-flex;
+  font-weight: 800;
+  justify-content: center;
+  padding: 14px 20px;
+}
+
+.primary-action {
+  background: #e74f42;
+  color: #ffffff;
+  box-shadow: 0 12px 22px rgba(231, 79, 66, 0.28);
+}
+
+.secondary-action {
+  background: #ffffff;
+  color: #133f4f;
+}
+
+.phone-preview {
+  background: #f7f7f4;
+  border: 10px solid #111827;
+  border-radius: 36px;
+  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.32);
+  color: #173747;
+  display: grid;
+  gap: 14px;
+  min-height: 520px;
+  padding: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.phone-top {
+  color: #111827;
+  font-weight: 900;
+}
+
+.preview-card {
+  background: linear-gradient(135deg, #173747, #255f61);
+  border-radius: 22px;
+  color: #ffffff;
+  padding: 24px;
+}
+
+.preview-card span {
+  color: #ffd166;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.preview-card strong {
+  display: block;
+  font-size: 28px;
+  line-height: 1.25;
+  margin-top: 8px;
+}
+
+.preview-question {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(23, 55, 71, 0.12);
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+
+.preview-question p {
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0;
+  text-align: center;
+}
+
+.preview-question div {
+  border: 3px solid #173747;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 900;
+  padding: 16px;
+  text-align: center;
+}
+
+.area-strip {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.area-strip span {
+  background: #ffffff;
+  border: 2px solid #173747;
+  border-radius: 18px;
+  color: #173747;
+  font-size: 22px;
+  font-weight: 900;
+  padding: 18px;
+  text-align: center;
+}
+
+.quick-match,
+.local-section,
+.instagram-panel {
+  background: #ffffff;
+  border: 1px solid #dde8e8;
+  border-radius: 24px;
+  padding: 30px;
+}
+
+.local-heading p {
+  color: #e74f42;
+}
+
+.local-heading h2 {
+  color: #173747;
+}
+
+.quiz-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.quiz-card {
+  background: #f4f7f6;
+  border-radius: 20px;
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+}
+
+.step-number {
+  color: #e74f42;
+  font-weight: 900;
+}
+
+.quiz-card h3 {
+  color: #173747;
+  font-size: 22px;
+  margin: 0;
+}
+
+.option-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.option-grid button {
+  background: #ffffff;
+  border: 2px solid #173747;
+  border-radius: 14px;
+  color: #173747;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 900;
+  padding: 13px;
+}
+
+.option-grid button:hover {
+  background: #ffe9e6;
+  border-color: #e74f42;
+}
+
+.local-job-card {
+  border-color: #cfe0dc;
+}
+
+.card-link {
+  background: #173747;
+  color: #ffffff;
+  margin-top: 6px;
+}
+
+.instagram-panel {
+  align-items: center;
+  background: linear-gradient(135deg, #fff7f0, #fff0f5 45%, #eef6ff);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) 320px;
+}
+
+.instagram-panel h2 {
+  color: #173747;
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 0 0 14px;
+}
+
+.instagram-panel p {
+  color: #31515f;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.instagram-panel ul {
+  background: rgba(255, 255, 255, 0.76);
+  border-radius: 20px;
+  display: grid;
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 22px;
+}
+
+.instagram-panel li {
+  color: #173747;
+  font-weight: 900;
+}
+
+.instagram-panel li::before {
+  color: #e74f42;
+  content: "✓";
+  margin-right: 8px;
+}
+
+@media (max-width: 900px) {
+  .local-hero,
+  .instagram-panel,
+  .quiz-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .phone-preview {
+    margin: 0 auto;
+    max-width: 340px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .local-hero,
+  .quick-match,
+  .local-section,
+  .instagram-panel {
+    border-radius: 18px;
+    padding: 22px;
+  }
+
+  .area-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions a {
+    width: 100%;
+  }
+}
